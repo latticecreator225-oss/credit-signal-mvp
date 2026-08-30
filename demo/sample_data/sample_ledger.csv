@@ -1,0 +1,68 @@
+Client Name,Inv No,Inv Dt,Due Dt,Paid On,Amt (INR),CN?,Disputed?
+Orchid Pharma Distributors,ORC-1001,05/01/2024,2024-02-04,28-Jan-24,"Rs.340,000.00",N,No
+Orchid Pharma Distributors,ORC-1015,2024-01-18,17-Feb-24,10 February 2024,"210,000",N,No
+Orchid Pharma Distributors,ORC-1032,08-Feb-24,09 March 2024,02/03/2024,275000,N,No
+Orchid Pharma Distributors,ORC-1048,22 February 2024,23/03/2024,2024-03-16,"Rs.190,000.00",N,No
+Orchid Pharma Distributors,ORC-1061,10/03/2024,2024-04-09,05-Apr-24,"320,000",N,No
+Orchid Pharma Distributors,ORC-1077,2024-03-25,24-Apr-24,20 April 2024,260000,N,No
+Orchid Pharma Distributors,ORC-1090,05-Apr-24,05 May 2024,20/05/2024,"Rs.300,000.00",N,No
+Orchid Pharma Distributors,ORC-1104,20 April 2024,20/05/2024,2024-06-10,"245,000",N,No
+Orchid Pharma Distributors,ORC-1119,05/05/2024,2024-06-04,25-Jun-24,355000,N,No
+Orchid Pharma Distributors,ORC-1133,2024-05-22,21-Jun-24,15 July 2024,"Rs.280,000.00",N,No
+Orchid Pharma Distributors,ORC-1150,08-Jun-24,08 July 2024,02/08/2024,"310,000",N,No
+Orchid Pharma Distributors,ORC-1166,25 June 2024,25/07/2024,2024-08-20,265000,N,No
+Neuland Traders,NEU-501,08/01/2024,2024-02-07,05-Feb-24,"Rs.180,000.00",N,No
+Neuland Traders,NEU-512,2024-01-24,23-Feb-24,22 February 2024,"150,000",N,No
+Neuland Traders,NEU-528,10-Feb-24,11 March 2024,11/03/2024,165000,N,No
+Neuland Traders,NEU-540,27 February 2024,28/03/2024,2024-03-27,"Rs.175,000.00",N,No
+Neuland Traders,NEU-556,12/03/2024,2024-04-11,10-Apr-24,"190,000",N,No
+Neuland Traders,NEU-570,2024-03-28,27-Apr-24,28 April 2024,160000,N,No
+Neuland Traders,NEU-585,09-Apr-24,09 May 2024,08/05/2024,"Rs.200,000.00",N,No
+Neuland Traders,NEU-598,24 April 2024,24/05/2024,2024-05-25,"155,000",N,No
+Neuland Traders,NEU-612,11/05/2024,2024-06-10,11-Jun-24,210000,N,No
+Neuland Traders,NEU-625,2024-05-27,26-Jun-24,24 June 2024,"Rs.170,000.00",N,No
+Neuland Traders,NEU-640,09-Jun-24,09 July 2024,09/07/2024,"195,000",N,No
+Neuland Traders,NEU-655,26 June 2024,26/07/2024,2024-07-27,180000,N,No
+Sunrise Pharma Corp,SUN-201,10/01/2024,2024-02-09,15-Feb-24,"Rs.420,000.00",N,No
+Sunrise Pharma Corp,SUN-214,2024-01-26,25-Feb-24,03 March 2024,"380,000",N,Yes
+Sunrise Pharma Corp,SUN-229,12-Feb-24,13 March 2024,18/03/2024,310000,N,No
+Sunrise Pharma Corp,SUN-CN-05,15 February 2024,16/03/2024,,"Rs.45,000.00",Y,No
+Sunrise Pharma Corp,SUN-241,28/02/2024,2024-03-29,02-Apr-24,"295,000",N,No
+Sunrise Pharma Corp,SUN-256,2024-03-14,13-Apr-24,19 April 2024,340000,N,No
+Sunrise Pharma Corp,SUN-270,29-Mar-24,28 April 2024,05/05/2024,"Rs.260,000.00",N,Yes
+Sunrise Pharma Corp,SUN-284,11 April 2024,11/05/2024,2024-05-16,"315,000",N,No
+Sunrise Pharma Corp,SUN-299,26/04/2024,2024-05-26,01-Jun-24,275000,N,No
+Sunrise Pharma Corp,SUN-312,2024-05-13,12-Jun-24,19 June 2024,"Rs.330,000.00",N,No
+Sunrise Pharma Corp,SUN-326,29-May-24,28 June 2024,04/07/2024,"290,000",N,No
+Sunrise Pharma Corp,SUN-340,10 June 2024,10/07/2024,2024-07-16,305000,N,No
+Sunrise Pharma Corp,SUN-355,27/06/2024,2024-07-27,02-Aug-24,"Rs.260,000.00",N,No
+Kwality Distributors,KWA-801,2024-01-15,14-Feb-24,20 February 2024,"220,000",N,No
+Kwality Distributors,KWA-815,02-Feb-24,03 March 2024,10/03/2024,195000,N,No
+Kwality Distributors,KWA-830,20 February 2024,21/03/2024,2024-03-25,"Rs.240,000.00",N,No
+Kwality Distributors,KWA-845,08/03/2024,2024-04-07,14-Apr-24,"205,000",N,No
+Kwality Distributors,KWA-860,2024-03-24,23-Apr-24,01 May 2024,230000,N,No
+Kwality Distributors,KWA-875,10-Apr-24,10 May 2024,18/05/2024,"Rs.260,000.00",N,No
+Kwality Distributors,KWA-890,27 April 2024,27/05/2024,2024-06-05,"215,000",N,No
+Kwality Distributors,KWA-905,14/05/2024,2024-06-13,22-Jun-24,250000,N,No
+Kwality Distributors,KWA-920,2024-05-30,29-Jun-24,09 July 2024,"Rs.235,000.00",N,No
+Kwality Distributors,KWA-935,12-Jun-24,12 July 2024,,"275,000",N,No
+Kwality Distributors,KWA-950,28 June 2024,28/07/2024,,260000,N,No
+Kwality Distributors Pvt. Ltd.,KWA-965,10/07/2024,2024-08-09,05-Aug-24,"Rs.245,000.00",N,No
+Kwality Distributors Pvt. Ltd.,KWA-980,2024-07-28,27-Aug-24,,"230,000",N,No
+Vertex Pharma Retail,VTX-01,05-Jul-24,04 August 2024,30/07/2024,95000,N,No
+Vertex Pharma Retail,VTX-02,20 July 2024,19/08/2024,,"Rs.120,000.00",N,No
+Bright Health Distributors,BRT-01,10/01/2024,2024-02-09,01-Feb-24,"150,000",N,No
+Bright Health Distributors,BRT-02,2024-01-25,24-Feb-24,15 February 2024,130000,N,No
+Bright Health Distributors,BRT-03,08-Jul-24,07 August 2024,05/08/2024,"Rs.175,000.00",N,No
+Bright Health Distributors,BRT-04,22 July 2024,21/08/2024,,"140,000",N,No
+Falcon Pharma Wholesale,FAL-301,06/02/2024,2024-03-07,02-Mar-24,205000,N,No
+Falcon Pharma Wholesale,FAL-315,2024-03-04,03-Apr-24,29 March 2024,"Rs.190,000.00",N,No
+Falcon Pharma Wholesale,FAL-330,09-Apr-24,09 May 2024,04/05/2024,"225,000",N,No
+Falcon Pharma Wholesale,FAL-344,06 May 2024,05/06/2024,2024-05-30,210000,N,No
+Falcon Pharma Wholesale,FAL-359,03/06/2024,2024-07-03,28-Jun-24,"Rs.230,000.00",N,No
+Falcon Pharma Wholesale,FAL-373,2024-07-01,31-Jul-24,26 July 2024,"215,000",N,No
+,BAD-001,05/07/2024,04/08/2024,,150000,N,No
+Orchid Pharma Distributors,BAD-002,not a date,04/08/2024,,150000,N,No
+Sunrise Pharma Corp,BAD-003,10/07/2024,09/08/2024,,TBD,N,No
+Neuland Traders,,12/07/2024,11/08/2024,,180000,N,No
+Kwality Distributors,BAD-005,15/07/2024,14/08/2024,,200000,maybe,No

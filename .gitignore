@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+*.pyc
+credit_signal.db
+.streamlit/secrets.toml
+output/

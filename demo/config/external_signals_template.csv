@@ -1,0 +1,8 @@
+customer_name,has_public_rating,rating_action,rating_action_date,litigation_filed,litigation_date,litigation_type,auditor_resigned,auditor_resignation_date,regulatory_action,regulatory_action_date,regulatory_action_note,filing_gap_12mo,research_notes
+Orchid Pharma Distributors,yes,downgrade,15/07/2024,no,,,no,,no,,,no,CARE cut long-term facility rating; source: CARE press release
+Neuland Traders,yes,none,,no,,,no,,no,,,no,Stable CRISIL A- reaffirmed most recent cycle; no action to report
+Sunrise Pharma Corp,no,none,,no,,,no,,no,,,no,No CRISIL/ICRA/CARE/India Ratings history found on any instrument
+Kwality Distributors,yes,withdrawal_non_cooperation,01/06/2024,yes,10/05/2024,ibc_cirp,yes,20/04/2024,no,,,no,Rating withdrawn - agency cited non-cooperation; NCLT petition admitted; auditor resigned 3 weeks prior - stacked signals
+Bright Health Distributors,no,none,,yes,15/06/2024,civil,no,,no,,,no,"Trade creditor suit (not IBC/CIRP) - unrated, so litigation is the only channel that applies here"
+Falcon Pharma Wholesale,yes,withdrawal_benign,10/07/2024,no,,,no,,no,,,no,Rating withdrawn at company's own request after clearing term debt; confirmed via rating agency's own withdrawal notice - not a distress signal
+Deliberately Malformed Test Row,maybe,junk_value,not-a-date,yes,,ibc_cirp,no,,no,,,no,intentionally broken row to prove the loader warns instead of crashing or silently dropping - not a real customer

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+    @page { size: A4; margin: 2cm 1.8cm; }
+    body { font-family: Helvetica, Arial, sans-serif; color: #1a1a2e; font-size: 10pt; line-height: 1.4; }
+    .banner {
+        background-color: #fff3cd; border: 2px solid #d97706; color: #7c2d12;
+        padding: 10px 14px; font-weight: bold; font-size: 10.5pt;
+        margin-bottom: 18px; text-align: center;
+    }
+    .footer-banner { margin-top: 34px; }
+    h1 { font-size: 20pt; color: #0f172a; margin-bottom: 2px; }
+    .subtitle { color: #475569; font-size: 10.5pt; margin-bottom: 4px; }
+    .generated-at { color: #94a3b8; font-size: 8.5pt; margin-bottom: 20px; }
+    h2 {
+        font-size: 13pt; color: #0f172a; border-bottom: 1.5px solid #cbd5e1;
+        padding-bottom: 4px; margin-top: 26px; margin-bottom: 10px;
+    }
+    table.summary-table { width: 100%; border-collapse: collapse; }
+    table.summary-table td { padding: 5px 10px; border: 1px solid #e2e8f0; }
+    table.summary-table td.label { color: #475569; width: 65%; }
+    table.summary-table td.value { font-weight: bold; text-align: right; }
+    table.data { width: 100%; border-collapse: collapse; margin-top: 6px; }
+    table.data th {
+        background-color: #0f172a; color: #ffffff; padding: 6px 8px;
+        text-align: left; font-size: 9pt;
+    }
+    table.data td { padding: 6px 8px; border-bottom: 1px solid #e2e8f0; font-size: 9pt; vertical-align: top; }
+    tr.risk-high td { background-color: #fef2f2; }
+    tr.risk-med td { background-color: #fffbeb; }
+    .score-cell { font-weight: bold; text-align: center; }
+    .callout { background-color: #f0fdf4; border-left: 4px solid #16a34a; padding: 8px 12px; margin: 6px 0; font-size: 9.5pt; }
+    .coverage-note { background-color: #f1f5f9; border-left: 4px solid #64748b; padding: 10px 12px; font-size: 9.5pt; margin-bottom: 10px; }
+    .legend-note { color: #64748b; font-size: 8.5pt; font-style: italic; margin-bottom: 16px; }
+    .methodology {
+        font-size: 9pt; color: #334155; white-space: pre-line;
+        background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 14px; margin-top: 8px;
+    }
+</style>
+</head>
+<body>
+
+{% if disclaimer_banner %}
+<div class="banner">{{ disclaimer_banner }}</div>
+{% endif %}
+
+<h1>{{ report_title }}</h1>
+{% if subtitle %}<div class="subtitle">{{ subtitle }}</div>{% endif %}
+<div class="generated-at">Generated {{ generated_at }}</div>
+
+{% if has_negative_exposure %}
+<div class="legend-note">{{ negative_exposure_note }}</div>
+{% endif %}
+
+<h2>Executive Summary</h2>
+<table class="summary-table">
+    <tr><td class="label">Total customers analyzed</td><td class="value">{{ total_customers }}</td></tr>
+    <tr><td class="label">Rated / in-coverage (this tool's strongest evidence applies)</td><td class="value">{{ rated_count }}</td></tr>
+    <tr><td class="label">Unrated (confirmed: no public rating found)</td><td class="value">{{ unrated_count }}</td></tr>
+    <tr><td class="label">Not yet researched</td><td class="value">{{ not_researched_count }}</td></tr>
+    <tr><td class="label">Total outstanding exposure, all customers</td><td class="value">{{ total_exposure }}</td></tr>
+    <tr><td class="label">&nbsp;&nbsp;of which, within rated/in-coverage group</td><td class="value">{{ rated_exposure }}</td></tr>
+    <tr><td class="label">&nbsp;&nbsp;of which, outside this tool's coverage (unrated + not-yet-researched)</td><td class="value">{{ out_of_coverage_exposure }}</td></tr>
+</table>
+
+<h2>Ranked Risk List &mdash; Rated / In-Coverage Customers</h2>
+<div class="coverage-note">
+    Only customers with a confirmed public rating history are ranked here &mdash; this is the group
+    where this tool's one backtested signal (rating-agency action) can actually be checked.
+    Ranking anyone else on this same scale would imply evidence that doesn't exist for them.
+</div>
+{% if ranked_customers %}
+<table class="data">
+    <tr><th>#</th><th>Customer</th><th>Score</th><th>Exposure</th><th>Evidence</th></tr>
+    {% for c in ranked_customers %}
+    <tr class="{% if c.score >= 40 %}risk-high{% elif c.score >= 15 %}risk-med{% endif %}">
+        <td>{{ c.rank }}</td>
+        <td>{{ c.customer_name }}</td>
+        <td class="score-cell">{{ c.score }}</td>
+        <td>{{ c.exposure }}</td>
+        <td>{{ c.evidence }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>No rated customers with a nonzero score in this ledger.</p>
+{% endif %}
+
+{% if reviewed_not_flagged %}
+<h2>Reviewed, Not Flagged</h2>
+<div class="coverage-note">
+    These customers had a signal this tool specifically checked for and deliberately chose
+    <strong>not</strong> to score as risk &mdash; shown here so it's visible the signal was
+    noticed and evaluated, not missed.
+</div>
+{% for r in reviewed_not_flagged %}
+<div class="callout"><strong>{{ r.customer_name }}</strong>: {{ r.note }}</div>
+{% endfor %}
+{% endif %}
+
+<h2>Unrated / Not-Yet-Researched Customers</h2>
+<div class="coverage-note">
+    <strong>These customers are NOT scored or ranked.</strong> This tool's one backtested signal
+    &mdash; rating-agency action &mdash; only exists to be detected for companies that carry a
+    public credit rating in the first place. A customer appearing here with no flags is not
+    confirmed low-risk; it means this tool's strongest evidence does not apply to them at all.
+    Treat this list as a reminder of where this report's coverage stops, not a clean bill of health.
+</div>
+{% if unrated_customers %}
+<table class="data">
+    <tr><th>Customer</th><th>Status</th><th>Outstanding Exposure</th></tr>
+    {% for c in unrated_customers %}
+    <tr>
+        <td>{{ c.customer_name }}</td>
+        <td>{{ c.coverage_status }}</td>
+        <td>{{ c.exposure }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>All customers in this ledger are within the rated/in-coverage group.</p>
+{% endif %}
+
+<h2>Methodology &amp; Evidence Strength</h2>
+<div class="methodology">{{ methodology_text }}</div>
+
+{% if disclaimer_banner %}
+<div class="banner footer-banner">{{ disclaimer_banner }}</div>
+{% endif %}
+
+</body>
+</html>

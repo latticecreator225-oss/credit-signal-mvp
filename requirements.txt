@@ -1,0 +1,22 @@
+# Stage 1 — ingestion + metrics
+pandas>=2.2
+python-dateutil>=2.9
+rapidfuzz>=3.9
+openpyxl>=3.1
+
+# Stage 4 — report generation
+jinja2>=3.1
+# WeasyPrint (named in the original brief) needs the GTK3 native runtime
+# (Pango/Cairo/GObject), which this machine doesn't have and which would
+# need a system-level installer to add. Substituted xhtml2pdf: pure
+# Python, no native dependency, same Jinja2-template architecture - the
+# brief explicitly allowed "WeasyPrint, or similar".
+xhtml2pdf>=0.2.17
+
+# Sales-demo Streamlit wrapper (app_demo.py) — not part of the delivery
+# pipeline itself
+streamlit>=1.38
+
+# Added in a later stage (kept here so `pip install -r requirements.txt`
+# stays a one-shot command as the project grows):
+# fastapi, uvicorn      -> Stage 5
